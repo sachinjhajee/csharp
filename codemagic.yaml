@@ -1,0 +1,21 @@
+workflows:
+  android_build:
+    name: Android Build
+    platform: android
+    flutter: false
+    android:
+      gradle:
+        - clean
+        - assembleDebug
+    scripts:
+      - echo "Starting Xamarin Android Build"
+    artifacts:
+      - build/**/outputs/**/*.apk
+    publish:
+      branches:
+        only:
+          - main
+    environment:
+      vars:
+        - ANDROID_HOME: /opt/android-sdk
+
