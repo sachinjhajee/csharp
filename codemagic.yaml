@@ -8,15 +8,36 @@ workflows:
         ANDROID_KEY_ALIAS: "$KEY_ALIAS"
         ANDROID_KEY_PASSWORD: "$KEY_PASSWORD"
     scripts:
-      - name: Install dependencies
+      - name: Install Dependencies
         script: |
-          sudo apt-get install -y mono-complete
-          sudo apt-get install -y nuget
-          nuget restore MyXamarinProject.sln # Restore NuGet packages
+          # Ensure the package manager is updated
+          brew update
+          
+          # Install .NET SDK (make sure to use ARM version)
+          brew install --cask dotnet-sdk
+
+          # Install Xamarin dependencies
+          brew install --cask visual-studio # Install Visual Studio for Mac (Xamarin)
+          
+          # Install Java and Android SDK
+          brew install openjdk@11
+          brew install android-sdk
+          
+          # Install NuGet if not available
+          curl -sSL https://aka.ms/install-nuget-cli | bash
+
+      - name: Restore Dependencies
+        script: |
+          # Restore Xamarin project dependencies using dotnet
+          dotnet restore MyXamarinProject.sln # Adjust for your solution file
+
       - name: Build Xamarin Project
         script: |
-          xbuild MyXamarinProject.sln /p:Configuration=Release /p:Platform="Any CPU" # Build the project using xbuild
-      - name: Build Android APK
+          # Build Xamarin Project with MSBuild for macOS ARM
+          msbuild MyXamarinProject.sln /p:Configuration=Release /p:Platform="Any CPU" # Ensure MSBuild targets ARM for macOS
+
+      - name: Build Android APK (if applicable)
         script: |
-          msbuild MyXamarinProject/MyXamarinProject.Android/MyXamarinProject.Android.csproj /p:Configuration=Release /p:Platform="x86" # Build Android APK
+          # Build the Android APK using MSBuild for Xamarin Android
+          msbuild MyXamarinProject/MyXamarinProject.Android/MyXamarinProject.Android.csproj /p:Configuration=Release /p:Platform="x86_64" # Adjust for your Android project
 
