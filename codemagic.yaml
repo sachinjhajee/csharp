@@ -10,34 +10,55 @@ workflows:
     scripts:
       - name: Install Dependencies
         script: |
-          # Ensure the package manager is updated
+          # Ensure package manager is updated
           brew update
-          
-          # Install .NET SDK (make sure to use ARM version)
-          brew install --cask dotnet-sdk
 
-          # Install Xamarin dependencies
-          brew install --cask visual-studio # Install Visual Studio for Mac (Xamarin)
-          
+          # Install .NET SDK (ensure ARM version for macOS M1/M2 chips)
+          if ! brew list --cask dotnet-sdk > /dev/null; then
+            brew install --cask dotnet-sdk
+          else
+            echo ".NET SDK already installed."
+          fi
+
+          # Install Xamarin dependencies (Visual Studio for Mac)
+          if ! brew list --cask visual-studio > /dev/null; then
+            brew install --cask visual-studio
+          else
+            echo "Visual Studio already installed."
+          fi
+
           # Install Java and Android SDK
-          brew install openjdk@11
-          brew install android-sdk
-          
+          if ! brew list openjdk@11 > /dev/null; then
+            brew install openjdk@11
+          else
+            echo "OpenJDK 11 already installed."
+          fi
+
+          if ! brew list android-sdk > /dev/null; then
+            brew install android-sdk
+          else
+            echo "Android SDK already installed."
+          fi
+
           # Install NuGet if not available
-          curl -sSL https://aka.ms/install-nuget-cli | bash
+          if ! command -v nuget > /dev/null; then
+            curl -sSL https://aka.ms/install-nuget-cli | bash
+          else
+            echo "NuGet CLI already installed."
+          fi
 
       - name: Restore Dependencies
         script: |
           # Restore Xamarin project dependencies using dotnet for the .csproj file
-          dotnet restore MyXamarinProject/MyXamarinProject.csproj # Adjust to the path of your .csproj file
+          dotnet restore MyXamarinProject/MyXamarinProject.csproj # Ensure the path is correct for your project
 
       - name: Build Xamarin Project
         script: |
-          # Build Xamarin Project with MSBuild for macOS ARM
-          msbuild MyXamarinProject/MyXamarinProject.csproj /p:Configuration=Release /p:Platform="Any CPU" # Build using the .csproj file
+          # Build Xamarin Project with MSBuild
+          msbuild MyXamarinProject/MyXamarinProject.csproj /p:Configuration=Release /p:Platform="Any CPU" # Adjust for your project
 
       - name: Build Android APK (if applicable)
         script: |
-          # Build the Android APK using MSBuild for Xamarin Android
-          msbuild MyXamarinProject/MyXamarinProject.Android/MyXamarinProject.Android.csproj /p:Configuration=Release /p:Platform="x86_64" # Adjust for your Android project
+          # Build Android APK using MSBuild for Xamarin Android
+          msbuild MyXamarinProject/MyXamarinProject.Android/MyXamarinProject.Android.csproj /p:Configuration=Release /p:Platform="x86_64" # Adjust as needed
 
