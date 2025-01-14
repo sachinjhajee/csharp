@@ -1,7 +1,6 @@
 workflows:
   xamarin_build:
     name: Xamarin Build Workflow
-    platform: android # or ios if you're targeting iOS
     environment:
       vars:
         ANDROID_KEYSTORE_PATH: "$HOME/.android/keystore.jks"
