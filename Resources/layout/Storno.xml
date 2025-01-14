@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayoutStorno">
+    
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/scroll">
+
+    <GridLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="14"
+        android:columnCount="2"
+        android:id="@+id/gridLayoutStorno" >
+        <TextView
+            android:text="Operator code: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblOperatorCode" 
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtOpCode"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:numeric="integer"
+                android:inputType="none|number"
+                android:maxLength="2"
+                android:soundEffectsEnabled="false"
+                android:text="1" 
+                
+            />
+        <TextView
+            android:text="Operator password: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblOperatorPswd" 
+            android:layout_row="1"
+            android:layout_column="0"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtOpPswd"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:text="0000"
+                android:inputType="none|number" 
+            />
+
+        <TextView
+            android:text="Till number: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblTillNumber" 
+            android:layout_row="2"
+            android:layout_column="0"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTillNumber"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:inputType="none|number"
+                android:text="1" 
+            />
+        <TextView
+            android:text="Storno reason type: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblStReasonType" 
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <Spinner
+                android:entries="@array/dropdown_StornoReasonType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerStornoReasonType"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:spinnerMode="dropdown" />
+
+        <TextView
+            android:text="Storno document\n number: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblStDocNum" 
+            android:layout_row="4"
+            android:layout_column="0"
+                android:maxLines="2" 
+                android:lines="2"
+        android:singleLine="false"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtStDocNum"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:inputType="none|number"
+                android:maxLength="7" 
+            />
+
+        <TextView
+            android:text="Storno document\n date and time: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblStDocDT" 
+            android:layout_row="5"
+            android:layout_column="0"
+                android:maxLines="2"
+                android:lines="2"
+        android:singleLine="false"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtStDocDT"
+            android:layout_row="5"
+            android:layout_column="1"
+            />
+        <TextView
+            android:text="FM number: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblFMNum" 
+            android:layout_row="6"
+            android:layout_column="0"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtFMNum"
+                android:layout_row="6"
+                android:layout_column="1"
+                android:inputType="none|number"
+                android:maxLength="8" 
+            />
+        <TextView
+            android:text="Document UNP: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblDocUNP" 
+            android:layout_row="7"
+            android:layout_column="0"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDocUNP"
+            android:layout_row="7"
+            android:layout_column="1"
+            />
+        <TextView
+            android:text="Storno by Invoice: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblStByInvoice" 
+            android:layout_row="8"
+            android:layout_column="0"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <Spinner
+                android:entries="@array/dropdown_StornoByInvoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerStornoByInvoice"
+                android:layout_row="8"
+                android:layout_column="1"
+                android:spinnerMode="dropdown" />
+        <TextView
+            android:text="Invoice number: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblInvoiceNum" 
+            android:layout_row="9"
+            android:layout_column="0"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtInvoiceNum"
+                android:layout_row="9"
+                android:layout_column="1"
+                android:inputType="none|number"
+                android:maxLength="10" 
+            />
+        <TextView
+            android:text="Storno reason: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblStornoReason" 
+            android:layout_row="10"
+            android:layout_column="0"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtStornoReason"
+            android:layout_row="10"
+            android:layout_column="1"
+            />
+        <TextView
+            android:text="UNP: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblUNP" 
+            android:layout_row="11"
+            android:layout_column="0"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtUNP"
+            android:layout_row="11"
+            android:layout_column="1"
+            />
+           </GridLayout>
+    
+    </ScrollView>
+
+    <LinearLayout 
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0"
+    android:id="@+id/linearLayoutStornoBottom">
+        <TextView
+            android:text="Can open STORNO"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblCanOpenStorno" 
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <Button
+            android:text="Storno"
+            android:id="@+id/btnStorno"
+            android:onClick="BtnStorno_Click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+        </LinearLayout>
+         
+

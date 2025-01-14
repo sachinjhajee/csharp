@@ -1,0 +1,17 @@
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\build.props
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\adb.props
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\SalesDemo_DevGr_A.csproj.AssemblyReference.cache
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\res.flag
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\lp\0\jl\files.cache
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\lp\12\jl\files.cache
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\lp\13\jl\files.cache
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\lp\17\jl\files.cache
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\lp\19\jl\files.cache
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\lp\29\jl\files.cache
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\lp\30\jl\files.cache
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\lp\31\jl\files.cache
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\lp\32\jl\files.cache
+D:\SOFT\PROJECTS\Bulgaria\Xamarin\FiscalPrinterSDK_Android\_Archive\1.0.0.5\FiscalDevice_XamarinAndroid_SDK_2023-03-15_v1.0.0.5Src_Bulgaria\DEMOS\SalesDemo_DevGr_A\obj\Debug\90\lp\36\jl\files.cache

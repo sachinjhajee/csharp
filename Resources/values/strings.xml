@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SalesDemo_DevGr_A</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+   
+  <string-array name="dropdown_arrays">
+
+    <item>English</item>
+    <item>Bulgarian</item>
+  </string-array>
+
+  <string-array name="dropdown_StornoReasonType">
+   
+    <item> Operator error </item>
+    <item> Refund </item>
+    <item>Tax base reduction</item>
+  </string-array>
+
+  <string-array name="dropdown_StornoByInvoice">
+    <item></item>
+    <item>Fiscal storno receipt</item>
+    <item>Invoice storno receipt</item>
+  </string-array>
+
+  <string-array name="dropdown_FMReports">
+
+    <item>Short</item>
+    <item>Extended</item>
+  </string-array>
+
+</resources>
