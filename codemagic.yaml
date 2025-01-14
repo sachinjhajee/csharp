@@ -1,21 +1,23 @@
 workflows:
-  android_build:
-    name: Android Build
-    platform: android
-    flutter: false
-    android:
-      gradle:
-        - clean
-        - assembleDebug
-    scripts:
-      - echo "Starting Xamarin Android Build"
-    artifacts:
-      - build/**/outputs/**/*.apk
-    publish:
-      branches:
-        only:
-          - main
+  xamarin_build:
+    name: Xamarin Build Workflow
+    platform: android # or ios if you're targeting iOS
     environment:
       vars:
-        - ANDROID_HOME: /opt/android-sdk
+        ANDROID_KEYSTORE_PATH: "$HOME/.android/keystore.jks"
+        ANDROID_KEYSTORE_PASSWORD: "$KEYSTORE_PASSWORD"
+        ANDROID_KEY_ALIAS: "$KEY_ALIAS"
+        ANDROID_KEY_PASSWORD: "$KEY_PASSWORD"
+    scripts:
+      - name: Install dependencies
+        script: |
+          sudo apt-get install -y mono-complete
+          sudo apt-get install -y nuget
+          nuget restore MyXamarinProject.sln # Restore NuGet packages
+      - name: Build Xamarin Project
+        script: |
+          xbuild MyXamarinProject.sln /p:Configuration=Release /p:Platform="Any CPU" # Build the project using xbuild
+      - name: Build Android APK
+        script: |
+          msbuild MyXamarinProject/MyXamarinProject.Android/MyXamarinProject.Android.csproj /p:Configuration=Release /p:Platform="x86" # Build Android APK
 
